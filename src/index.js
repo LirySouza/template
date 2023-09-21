@@ -9,30 +9,45 @@ import ErroPage from './pages/ErroPage';
 import App from './pages/App';
 import CadastroProduto from './pages/CadastroProduto';
 import "./App.css";
+import { CssBaseline } from '@mui/material';
 
 const theme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#B2162C',
-      dark: '#d0293d',
+      main: '#5d42ad',
+      light: '#6B5DE3',
+      dark: '#6090FD',
     },
     secondary: {
-      main: '#1c1448',
+      main: '#c33c6c',
+      light: '#191A3B',
+      dark: '#191A3B',
     },
-    text: {
-      primary: 'rgba(53,44,44,0.87)',
-      secondary: 'rgba(18,18,18,0.6)',
+    background: {
+      default: '#e0eaec',
     },
-    warning: {
-      main: '#d67934',
-      light: '#c32727',
+    error: {
+      main: '#b90b0b',
+      light: '#f10808',
+      dark: '#cb0f0f',
     },
     info: {
-      main: '#5b428a',
-      light: '#8b4cde',
+      main: '#1d6590',
+      light: '#4ea0c7',
+      dark: '#2a2ad4',
     },
-    divider: 'rgba(47,44,44,0.12)',
+    success: {
+      main: '#236927',
+      light: '#37ce44',
+    },
+    text: {
+      primary: '#716c6c',
+      secondary: 'rgba(0,0,0,0.7)',
+    },
+  },
+  typography: {
+    fontFamily: 'Droid Sans',
   },
 });
 
@@ -70,6 +85,7 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <ThemeProvider theme={theme}>
+    <CssBaseline />
     <RouterProvider router={router} />
   </ThemeProvider>
 );
